@@ -1,5 +1,7 @@
 export interface Character {
     name: string;
-    icon: string;
+    gender: 'man' | 'woman' | 'nonbinary';
+    occupation: string;
+    age: number;
     adjectives: string[];
 }
