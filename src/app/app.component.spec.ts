@@ -17,11 +17,11 @@ describe('AppComponent', () => {
         expect(app).toBeTruthy();
     });
 
-    it(`should have as title 'story-time'`, () => {
+    it(`should have as title 'Story Time'`, () => {
         const fixture = TestBed.createComponent(AppComponent);
         const app = fixture.componentInstance;
 
-        expect(app.title).toEqual('story-time');
+        expect(app.title).toEqual('Story Time');
     });
 
     it('should render title', () => {
@@ -30,7 +30,7 @@ describe('AppComponent', () => {
         const compiled = fixture.nativeElement as HTMLElement;
 
         expect(compiled.querySelector('.content span')?.textContent).toContain(
-            'story-time app is running!'
+            'Story Time'
         );
     });
 });
