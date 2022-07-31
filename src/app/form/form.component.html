@@ -1,1 +1,16 @@
-<p>form works!</p>
+<form [formGroup]="storyForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="genre">Genre</label>
+
+        <select formControlName="genre" id="genre">
+            <option 
+                *ngFor="let genre of genres" 
+                [ngValue]="genre"
+            >
+                {{ genre }}
+            </option>
+        </select>
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
