@@ -1,1 +1,8 @@
-<p>header works!</p>
+<h1>{{ title }}</h1>
+<nav>
+    <ul>
+        <li *ngFor="let page of pages">
+            {{ page }}
+        </li>
+    </ul>
+</nav>

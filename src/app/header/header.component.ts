@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class HeaderComponent implements OnInit {
+    title: string = 'Story Time'
+    pages: string[] = [
+        'Create a Story',
+        'Favorites'
+    ]
+
     constructor() {}
 
     ngOnInit(): void {}
