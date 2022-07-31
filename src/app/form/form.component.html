@@ -12,5 +12,71 @@
         </select>
     </div>
 
+    <section>
+        <h2>Main Character</h2>
+
+        <div>
+            <label for="mainCharacterName">Name</label>
+            
+            <input 
+                formControlName="mainCharacterName" 
+                id="mainCharacterName" 
+                type="text"
+            />
+        </div>
+
+        <div>
+            <label for="mainCharacterGender">Gender</label>
+    
+            <select formControlName="mainCharacterGender" id="mainCharacterGender">
+                <option 
+                    *ngFor="let gender of genders" 
+                    [ngValue]="gender"
+                >
+                    {{ gender }}
+                </option>
+            </select>
+        </div>
+
+        <div>
+            <label for="mainCharacterOccupation">Occupation</label>
+            
+            <input 
+                formControlName="mainCharacterOccupation" 
+                id="mainCharacterOccupation" 
+                type="text"
+            />
+        </div>
+
+        <div>
+            <label for="mainCharacterAge">Age</label>
+            
+            <input 
+                formControlName="mainCharacterAge" 
+                id="mainCharacterAge" 
+                type="number"
+            />
+        </div>
+
+        <article>
+            <h3>Adjectives</h3>
+
+            <input 
+                formControlName="mainCharacterAdjective1" 
+                type="text"
+            />
+
+            <input 
+                formControlName="mainCharacterAdjective2" 
+                type="text"
+            />
+
+            <input 
+                formControlName="mainCharacterAdjective3" 
+                type="text"
+            />
+        </article>
+    </section>
+
     <button type="submit">Submit</button>
 </form>
