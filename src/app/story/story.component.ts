@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { StoryService } from './../services/story.service';
+import { Story } from '../interfaces/story';
 
 @Component({
     selector: 'app-story',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class StoryComponent implements OnInit {
-    constructor() {}
+    constructor(
+        private storyService: StoryService
+    ) {}
+
+    story: Story = this.storyService.getStory()
 
     ngOnInit(): void {}
 }
